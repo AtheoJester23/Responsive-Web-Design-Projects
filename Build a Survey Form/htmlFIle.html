@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="cssFile.css">
+    </head>
+    <body>
+        <h1 id="title" class="title">Survey Form</h1>
+    <p id="description" class="desc">This is a survey form about your opinion about school research / thesis</p>
+  
+    <form id="survey-form">
+      <div class="inputs">
+      <label id="name-label">Name:
+        <input placeholder="Enter Your Name" id="name" type="text" required class="theInput">
+      </label>
+      <label id="email-label">Email:
+        <input placeholder="Enter Your Email" id="email" type="email" required class="theInput">
+      </label>
+      
+      <label id="number-label">Age:
+        <input placeholder="Enter Your Age" id="number" type="number" min="3" max="199" class="theInput">
+      </label>
+  
+        <label>
+        Which one are you?
+        <select id="dropdown">
+            <option value="Something">Student</option>
+            <option value="Something2">Teacher</option>
+    
+            <option value="Something2">Others</option>
+        </select>
+        </label>
+  
+        <label>
+        What is your gender?
+        <div class="gender">
+            <label>
+            <input type="radio" name="gender" value="Male">
+            Male
+            </label>
+    
+            <label>
+            <input type="radio" name="gender" value="Female">
+            Female
+            </label>
+    
+            <label>
+            <input type="radio" name="gender" value="Other">
+            Other
+            </label>
+        </div>
+        </label>
+  
+        <label>
+        Factors of your opinion:
+        <div class="factors">
+            <label>
+            <input type="checkbox" name="prefer" value="front-end-projects"/>
+            Difficulty
+            </label>
+            <label>
+            <input type="checkbox" name="prefer" value="back-end-projects"/>
+            Distraction
+            </label>
+            <label>
+            <input type="checkbox" name="prefer" value="challenges"/>
+            Other(describe below)
+            </label>
+        </div>
+    
+        <div>
+            <label>
+            <textarea placeholder="Enter your comment here...">
+            </textarea>
+            </label>
+        </div>
+        </label>
+  
+      <input id="submit" type="submit" class="submit"></input>
+  
+      
+    </form>
+    </div>
+    </body>
+</html>

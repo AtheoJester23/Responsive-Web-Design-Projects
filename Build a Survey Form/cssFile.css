@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(24,24,24);
+    padding: 20px
+ }
+ 
+ .title, .desc{
+   text-align: center;
+   color: gold
+ }
+ 
+ .inputs{
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   gap: 15px;
+   border: solid;
+   border-width: 1px;
+   border-color: white;
+   color: white;
+   margin: 20px;
+ }
+ 
+ .theInput{
+   width: 100%;
+ }
+ 
+ select{
+   width: 100%;
+   text-align: center;
+ }
+ 
+ .gender, .factors{
+   padding: 10px;
+   display: flex;
+   flex-direction: column
+ }
+ 
+ .submit{
+ background-color: 	rgb(53, 94, 59);
+ border: none;
+ color: white;
+ padding: 5px;
+ border-radius: 15px;
+ }
+ 
+ .submit:hover{
+   cursor: pointer;
+ }
+ 
+ textarea{
+   width: 100%;
+ }
+ 
