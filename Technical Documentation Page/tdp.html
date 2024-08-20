@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="tdp.css">
+
+    <!-- Google font: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <nav id="navbar">
+        <a href="#Brief_History_of_PHP">Brief History of PHP</a>
+    </nav>
     <main id="main-doc">
-        <section class="main-section" id="Brief_History_of_Rubiks_Cube">
+        <section class="main-section" id="Brief_History_of_PHP">
             <header>
                 Brief History of PHP
             </header>
@@ -16,7 +26,7 @@
                 <p>In 1995, PHP/FI (Form Interpreter) was released as the first version, with basic functionality for web development, allowing users to create simple dynamic websites. Due to its ease of use and integration with HTML, PHP quickly gained popularity. By 1997, PHP had undergone significant improvements, and two Israeli developers, Zeev Suraski and Andi Gutmans, rewrote its core, leading to the release of PHP 3 in 1998. This version rebranded PHP as "PHP: Hypertext Preprocessor" and introduced support for a broader range of databases and protocols, which greatly expanded its functionality.</p>
                 <p>PHP 4, released in 2000, introduced the Zend Engine, which dramatically improved performance. Subsequent versions continued to enhance security, performance, and object-oriented programming features. PHP 5, released in 2004, further strengthened object-oriented programming, and PHP 7, released in 2015, brought significant speed improvements and reduced memory usage.</p>
                 <ul>
-                    <p>Is PHP dead?</p>
+                    <p class="topic">Is PHP dead?</p>
                     <li>PHP is used by about 78% of all websites(For curious people, python is about 2%)</li>
                     <li>Popular websites using PHP: facebook, wikipedia, canva, wordpress(Content Management System).</li>
                     <li>PHP is constantly improving and receiving updates.</li>
@@ -24,12 +34,12 @@
             </article>
         </section>
 
-        <section class="main-section">
+        <section class="main-section" id="Learning_PHP">
             <header>
                 Learning PHP
             </header>
             <article>
-                <p>In 1995, PHP/FI (Form Interpreter) was released as the first version, with basic functionality for web development, allowing users to create simple dynamic websites. Due to its ease of use and integration with HTML, PHP quickly gained popularity. By 1997, PHP had undergone significant improvements, and two Israeli developers, Zeev Suraski and Andi Gutmans, rewrote its core, leading to the release of PHP 3 in 1998. This version rebranded PHP as "PHP: Hypertext Preprocessor" and introduced support for a broader range of databases and protocols, which greatly expanded its functionality.</p>
+                <p class="topic">Learning PHP can roughly be split into 3 parts…</p>
                 <ul>
                     <li>PHP language - learning how to program the PHP itself</li>
                     <li>Databases - learning how to manipulate databases.</li>
@@ -38,16 +48,156 @@
             </article>
         </section>
 
-        <section class="main-section">
-            
+        <section class="main-section" id="PHP_Syntax_for_Beginners">
+            <header>
+                PHP Syntax for Beginners
+            </header>
+            <article>
+                <p class="topic">To use php, we'll need to use this:</p>
+                <code>&lt;?php ?&gt;</code>
+                <p class="topic">Few Key Notes:</p>
+                <ul>
+                    <li>You can actually put no semicolon on the last line in a block of PHP. But it’s recommended to always put a semicolon</li>
+                    <li>If your file is pure php code, you don't need to put the closing tag "?>"</li>
+                </ul>
+
+                <p class="topic">To display some simple html:</p>
+                <code>
+                    &lt;?php if(true)&#123;<br>
+                    &nbsp;&nbsp;&lt;p&gt;Some HTML text...&lt;/p&gt;<br>
+                    ?&gt;
+                </code>
+
+                <p class="topic">Comments:</p>
+                <ul>
+                    <li>User "//" for single Line</li>
+                    <li>Use "/*-- --*/" for multiple Lines</li>
+                </ul>
+                <code>
+                    &lt;?php<br>
+                    &nbsp;&nbsp;//This right here is a comment<br>
+                    &nbsp;&nbsp;&lt;p&gt;Some HTML text...&lt;/p&gt;<br>
+                    ?&gt;
+                </code>
+            </article>
         </section>
 
-        <section class="main-section">
+        <section class="main-section" id="PHP_Variable_and_Data_Type">
+            <header>
+                PHP Variable and Data Type
+            </header>
+
+            <p class="topic">To declare a variable:</p>
+
+            <ul>
+                <li>By using "$" + the desired variable name</li>
+            </ul>
+
+            <p>Example:</p>
+
+            <code>
+                &lt;?php<br>
+                &nbsp;&nbsp;$name = "Someone"<br>
+                &nbsp;&nbsp;echo $name;<br>
+                ?&gt;
+            </code>
+
+            <p class="topic">To declare a data type:</p>
+
+            <ul>
+                <li>Scalar types</li>
+            </ul>
+
+            <p><strong>Note: </strong> The “string”, “int”, “float”, “bool” is just a variable name. in PHP, you generally do not need to declare the data type of a variable explicitly.</p>
+
+            <code>
+                &lt;?php<br>
+                &nbsp;&nbsp;$string = "Someone"<br>
+                &nbsp;&nbsp;$int = 1234567<br>
+                &nbsp;&nbsp;$float = 2.567<br>
+                &nbsp;&nbsp;$bool = true<br>
+                ?&gt;
+            </code>
             
+            <ul>
+                <li>Array types</li>
+            </ul>
+
+            <p>You could do it in two ways:</p>
+
+            <code>
+                &lt;?php<br>
+                &nbsp;&nbsp;$variableName = array('a', 'b', 'c'); //For PHP version 5.4 or older<br>
+                &nbsp;&nbsp;$variableName2 = ['a', 'b', 'c']; //For newer version<br>
+                ?&gt;
+            </code>
+
+            <ul>
+                <li>Object type</li>
+            </ul>
+
+            <p>Object - Something we create based of a “class”;</p>
+
+            <code>
+                &lt;?php<br>
+                &nbsp;&nbsp;$object = new Car();<br>
+                ?&gt;
+            </code>
+
         </section>
 
-        <section class="main-section">
+        <section class="main-section" id="Built-In_Superglobal_Variables_in_PHP
+        ">
+            <header>
+                Built-In Superglobal Variables in PHP
+            </header>
+
+            <p class="topic">Superglobal Variables always starts with “$_” + capitalized word.</p>
             
+            <ul>
+                <li>
+                    <strong>$_SERVER["DOCUMENT_ROOT"];</strong>
+                     - Used to get the information about the root path of 
+                    a particular website
+                </li>
+                <li>
+                    <strong>$_SERVER[“PHP_SELF”];</strong>
+                     - Used to get the root folder and the file name of a file.
+                </li>
+                <li>
+                    <strong>$_SERVER[“SERVER_NAME”];</strong>
+                     - To get the name of the server
+                </li>
+                <li>
+                    <strong>$_SERVER[“REQUEST_METHOD”];</strong>
+                     - It’ll get what request_method is used. Request methods are like the things in the node.js, the get, post, put, delete, etc… method.
+                </li>
+                <li>
+                    <strong>$_GET</strong>
+                     - To get something from array or database.
+                </li>
+                <li>
+                    <strong>$_POST</strong>
+                     - To add something in the database.
+                </li>
+                <li>
+                    <strong>$_REQUEST</strong>
+                     - not be confused by “$_SERVER[“REQUEST_METHOD”]”... also work to output/input from or in the database. Meaning it works in many ways, so it’s much recommended to just use the specifics like $_GET or $_POST, etc…
+                </li>
+                <li>
+                    <strong>$_FILES</strong>
+                     - To get all the information about the files that’s going to be submitted/uploaded
+                </li>
+                <li>
+                    <strong>$_COOKIE</strong>
+                     - Small files that the server embeds on the user’s computer
+                </li>
+                <li>
+                    <strong>$_SESSION</strong>
+                     - used to store and manage session data across multiple pages of a web application. Sessions in PHP allow you to persist data (like user information) across different pages during a user's visit.
+                </li>
+            </ul>
+
         </section>
     </main>
 </body>

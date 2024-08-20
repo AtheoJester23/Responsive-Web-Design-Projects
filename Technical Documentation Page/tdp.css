@@ -1,0 +1,42 @@
+body{
+    color: goldenrod;
+    background-color: rgb(24, 24,24);
+    font-family: "Nunito", sans-serif;
+    padding: 65px;
+}
+
+
+code{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    background-color: rgb(61,61,61)
+}
+
+.topic{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+header{
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+nav{
+    background-color: rgb(33,33,33);
+    color: #FFFDD0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFDD0;
+}
+
