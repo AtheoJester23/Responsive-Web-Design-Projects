@@ -3,6 +3,9 @@ body{
     background-color: rgb(24, 24,24);
     font-family: "Nunito", sans-serif;
     padding: 65px;
+    line-height: 1.5;
+    display: relative;
+    overflow-x: hidden;
 }
 
 
@@ -25,18 +28,128 @@ header{
     color: white;
 }
 
-nav{
+#navbar{
     background-color: rgb(33,33,33);
     color: #FFFDD0;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 300px;
     padding: 20px;
+}
+
+nav{
+    display: block;
+    overflow: hidden;
+    user-select: none;
+}
+
+main{
+    margin-left: 320px;
+}
+
+.mainTitle{
+    margin: 15px 0px;
+    text-align: center;
 }
 
 a{
     text-decoration: none;
     color: #FFFDD0;
+}
+
+.navSections{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-link{
+    border: solid;
+    border-width: 1px;
+    padding: 20px;
+    border-radius: 15px;
+    transition: background-color 0.15s;
+}
+
+.nav-link:hover{
+    background-color: #FFFDD0;
+    color: rgb(33,33,33);
+}
+
+@media screen and (max-width: 815px) {
+    #navbar {
+        position: absolute; /* Change from fixed to relative */
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%; 
+
+        height: 200px;
+        padding: 10px 20px; /* Adjust padding as needed */
+        margin-bottom: 20px; /* Add some space below the nav */
+    }
+
+    main {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 200px;
+    }
+
+    .navSections{
+        display: flex;
+        flex-direction: row;
+        margin-top: 7px;
+        overflow-x: auto;
+        padding: 20px;
+    }
+    
+    /* Webkit-based browsers */
+    .navSections::-webkit-scrollbar {
+        height: 7px; /* Width of the scrollbar */
+    }
+
+    .navSections::-webkit-scrollbar-track {
+        background: #333; /* Background color of the track */
+        cursor: pointer;
+    }
+
+    .navSections::-webkit-scrollbar-thumb {
+        background: #888; /* Color of the draggable part of the scrollbar */
+        border-radius: 10px; /* Round the corners */
+    }
+
+    .navSections::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Color of the scrollbar when hovered */
+}
+
+    .nav-link {
+        flex-shrink: 0; /* Prevent the items from shrinking */
+        white-space: nowrap; /* Prevent the text from wrapping */
+    }
+
+    .mainTitle{
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 7px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: none; /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the draggable part of the scrollbar */
+    border-radius: 10px; /* Round the corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar when hovered */
 }
 
