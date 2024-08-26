@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(33, 33, 33);
+    height: 2000px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 249);
+    padding: 15px 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#header-img{
+    border-width: 1px;
+    border-radius: 100px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+    border: solid;
+    border-width: 1px;
+    padding: 20px;
+}
+
+#nav-bar{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.vidContainer{
+    margin: 0 auto;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
