@@ -13,6 +13,11 @@ header{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2000;
+}
+
+.checkCoach{
+    margin-top: 90px;
 }
 
 #header-img{
@@ -35,12 +40,39 @@ header{
     justify-content: center;
 }
 
+.hook{
+    margin-top: 100px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 200px 300px;
+    justify-content: end;
+    padding: 60px;
+    background-color: rgb(33,33,33);
+    color: white;
+}
+
+.hookH1{
+    font-size: 60px;
+}
+
+.hookDesc{
+    font-size: 26px;
+}
+
+.letsStart{
+    background-color: goldenrod;
+    color: #0A0E17;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
 .vidContainer{
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 50px;
     margin-bottom: 80px;
     overflow: hidden;
     width: 100%;
@@ -50,6 +82,25 @@ header{
 .vidContainer iframe {
     width: 100%;
     border-radius: 30px; /* Same value as the container */
+}
+
+.clientContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    margin-top: 70px;
+    margin-bottom: 90px;
+}
+
+.clientTitle{
+    font-size: 80px;
+    color: whitesmoke;
+    margin-top: 50px;
+}
+
+.clientDesc{
+    color: white;
+    font-size: 14px;
 }
 
 form{
@@ -84,6 +135,36 @@ form{
     background-color: #172D44;
 }
 
+.quotes{
+    font-size: 30px;
+}
+
+.quotesContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 70px;
+}
+
+.coachImg1{
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.15s;
+}
+
+.coachImg1:hover{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.coachImg2, .coachImg3{
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+}
+
 .about{
     text-align: center;
     margin: 50px 80px;
@@ -93,29 +174,37 @@ form{
     justify-content: center;
     align-items: center;
     color: #FEF9FF;
+
 }
 
-/* #aboutGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-} */
+#aboutGrid{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
 
 .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     text-align: center;
     color: white;
-    gap: 20px;
+    background-color: red;
+    gap: 0px;
+    margin-top: 50px;
 }
 
 .gridContent{
-    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.about-img{
-    width: 60%;
-    height: 60%;
+.client-img{
+    width: 30%;
+    height: 30%;
+    border-radius: 1000px;
 }
 
 .about-desc{
@@ -126,3 +215,29 @@ form{
 hr{
     color: #FEF9FF;
 }
+
+.hidden{
+    opacity: 0;
+    filter: blur(1px);
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* .hiddenUp{
+    opacity: 0;
+    filter: blur(1px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.upShow{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+} */
