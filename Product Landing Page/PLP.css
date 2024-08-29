@@ -68,6 +68,12 @@ header{
     padding: 15px 20px;
 }
 
+#video{
+    height: 563px;
+    width: 1000px;
+    border-radius: 20px;
+}
+
 .vidContainer{
     opacity: 0;
     transform: translateY(50px);
@@ -81,7 +87,7 @@ header{
     margin-bottom: 80px;
     overflow: hidden;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
 }
 
 .vidContainer.show {
@@ -92,6 +98,14 @@ header{
 .vidContainer iframe {
     width: 100%;
     border-radius: 30px; /* Same value as the container */
+}
+
+.vidSection{
+    padding-bottom: 30px;
+}
+
+.quoteSection{
+    padding-bottom: 30px;
 }
 
 .clientContainer{
@@ -230,7 +244,8 @@ form{
 }
 
 .coachName{
-    background-color: #BF0426;
+    background-color: rgb(15, 15, 15);
+    color: #C0C0C0;
     display: block;
     display: flex;
     justify-content: center;
@@ -269,7 +284,7 @@ form{
 }
 
 hr{
-    color: #FEF9FF;
+    color: black;
 }
 
 .hidden{
@@ -348,6 +363,10 @@ z-index: -1;
     background-color: #161616;
     position: relative;
     padding-top: 50px;
+}
+
+footer{
+    background-color: rgb(33,33,33);
 }
 
 
@@ -575,6 +594,7 @@ z-index: -1;
         overflow-y: hidden;
         padding: 20px;
         margin-bottom: 50px;
+        
     }
 
     .meetCoach{
@@ -616,4 +636,10 @@ z-index: -1;
         padding-top: 50px;
     }
     
+}
+
+@media (min-width: 1430px){
+    #teleportHere{
+        display: none;
+    }
 }
