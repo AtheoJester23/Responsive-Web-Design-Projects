@@ -1,6 +1,6 @@
 body{
     background-color: #161616;
-    height: 2000px;
+    /* height: 2000px; */
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -311,7 +311,7 @@ hr{
 
 .foreground {
     transform: translateZ(-4px) scale(1.5);
-  }
+}
 
 .background{
 position: absolute;
@@ -323,10 +323,10 @@ z-index: -1;
 
 .foreground {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 120%;
+    width: 120%;
     object-fit: scale-down;
-    left: 270px;
+    left: 150px;
     z-index: -1;
 }
 
@@ -350,7 +350,270 @@ z-index: -1;
     padding-top: 50px;
 }
 
-/* medium phone */
-@media (min-width: 375px) and (max-width: 768px){
 
+/* medium phone */
+@media (min-width: 333px) and (max-width: 768px){
+    header{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #BF0426;
+        padding: 15px 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000;
+    }
+
+    #header-img{
+        width: 200px;
+        height: auto;
+
+    }
+
+    #nav-bar {
+        display: flex;
+        gap: 2px; /* Reduced gap between nav links */
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; /* Wrap navigation links to the next line if needed */
+    }
+
+    .nav-link {
+        display: flex;
+        text-decoration: none;
+        color: #FEF9FF;
+        border: solid;
+        border-width: 1px;
+        padding: 7px 10px; /* Reduced padding */
+        font-size: 10px; /* Smaller font size */
+    }
+
+    .hook{
+        margin-top: 100px;
+        height: 350px;
+        display: grid;
+        grid-template-rows: 100px 300px;
+        justify-content: start;
+        padding: 30px;
+        background-color: rgb(33,33,33);
+        color: white;
+    }
+
+    .hookH1{
+        font-size: 30px;
+    }
+
+    .hookDesc{
+        font-size: 10px;
+    }
+
+    .letsStart{
+        background-color: goldenrod;
+        color: #0A0E17;
+        font-weight: bold;
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    .checkCoach{
+        margin-top: 70px;
+        font-size: 15px;
+    }
+
+    #video{
+        height: 140px;
+        width: 248px;
+        border-radius: 5px;
+    }
+    
+    .clientTitle{
+        font-size: 30px;
+        color: whitesmoke;
+        margin-top: 25px;
+    }
+    
+    .clientDesc{
+        color: white;
+        font-size: 12px;
+    }
+
+    .clientTDContainer{
+        width: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .about{
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        text-align: center;
+        margin: 50px 80px;
+        width: 250px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FEF9FF;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .clientContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .clientName{
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+
+    .theReview{
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .revStat{
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .about2{
+        opacity: 0;
+        transform: translateX(100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        text-align: center;
+        margin: 50px 80px;
+        width: 250px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #FEF9FF;
+    }
+
+    #teleportThis{
+        display: none;
+    }
+
+    #teleportHere{
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .form-container{
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        /* background-color: #0A0E17; */
+        padding: 40px;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        gap: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .changeText{
+        font-size: 20px;
+        margin-bottom: px;
+    }
+    
+    #email{
+        width: 170px;
+        height: 20px;
+        border-radius: 3px;
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    #submit{
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    .foreground {
+        transform: translateZ(-4px) scale(2.2);
+    }
+
+    .foreground {
+        position: absolute;
+        height: 90%;
+        width: 90%;
+        object-fit: scale-down;
+        left: 70px;
+        z-index: -1;
+    }
+
+    .quotes{
+        font-size: 15px;
+    }
+
+    .coachList{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        /* background-color: red; */
+        gap: 30px;
+        margin-top: 50px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    .meetCoach{
+        margin-top: 70px;
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+    
+    .coachName{
+        background-color: #BF0426;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 50%;
+        border: solid;
+        border-width: 2px;
+        border-top: none;
+        border-radius: 0px 0px 20px 20px;
+        font-size: 5px;
+    }
+
+    .gridContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        /* border: solid; */
+        transition: transform 0.15s;
+    }
+
+    
+    .mainSec2{
+        z-index: 1999;
+        background-color: #161616;
+        position: relative;
+        padding-top: 50px;
+    }
+    
 }
