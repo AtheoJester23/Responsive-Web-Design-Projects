@@ -1,6 +1,7 @@
 body{
     background-color: #161616;
     height: 2000px;
+    overflow-x: hidden;
 }
 
 header{
@@ -45,7 +46,7 @@ header{
     height: 600px;
     display: grid;
     grid-template-rows: 200px 300px;
-    justify-content: end;
+    justify-content: start;
     padding: 60px;
     background-color: rgb(33,33,33);
     color: white;
@@ -67,6 +68,9 @@ header{
 }
 
 .vidContainer{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -77,6 +81,11 @@ header{
     overflow: hidden;
     width: 100%;
     max-width: 600px;
+}
+
+.vidContainer.show {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to normal position */
 }
 
 .vidContainer iframe {
@@ -97,6 +106,7 @@ header{
     color: whitesmoke;
     margin-top: 50px;
 }
+
 
 .clientDesc{
     color: white;
@@ -142,30 +152,29 @@ form{
 .quotesContainer{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 100px;
     margin: 70px;
 }
 
-.coachImg1{
+.meetCoach{
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.coachImg1, .coachImg2, .coachImg3{
     width: 80%;
     height: 100%;
     border-radius: 20px;
-    transition: width 0.15s;
+    transition: transform 0.15s;
 }
 
-.coachImg1:hover{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
 
-.coachImg2, .coachImg3{
-    width: 80%;
-    height: 100%;
-    border-radius: 20px;
-}
+
 
 .about{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
     text-align: center;
     margin: 50px 80px;
     width: 700px;
@@ -174,23 +183,63 @@ form{
     justify-content: center;
     align-items: center;
     color: #FEF9FF;
-
 }
 
-#aboutGrid{
+.about.showX {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move to normal position */
+}
+
+.about2{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    text-align: center;
+    margin: 50px 80px;
+    width: 700px;
+    margin: 0 auto;
     display: flex;
-    gap: 25px;
     justify-content: center;
     align-items: center;
+    color: #FEF9FF;
 }
 
-.grid{
+.about2.hiddenX{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.about2.showX {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move to normal position */
+}
+
+.coachList{
     display: flex;
+    flex-direction: row;
     text-align: center;
     color: white;
-    background-color: red;
-    gap: 0px;
+    /* background-color: red; */
+    gap: 30px;
     margin-top: 50px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 20px;
+}
+
+.coachName{
+    background-color: #BF0426;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+    border: solid;
+    border-width: 2px;
+    border-top: none;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .gridContent{
@@ -198,7 +247,13 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
+    transition: transform 0.15s;
+}
 
+.gridContent:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .client-img{
@@ -229,15 +284,15 @@ hr{
     transform: translateY(0);
 }
 
-/* .hiddenUp{
+.hiddenX{
     opacity: 0;
     filter: blur(1px);
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition: all 1s;
 }
 
-.upShow{
+.showX{
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-} */
+}
