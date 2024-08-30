@@ -17,6 +17,17 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+const observerY = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
 const observerX = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
@@ -38,10 +49,14 @@ const vidContainer = document.querySelector(".vidContainer");
 
 const aboutElement = document.querySelectorAll(".about");
 
+const hiddenElementsY = document.querySelectorAll(".hiddenY");
+
 hiddenElements.forEach((el) => observer.observe(el));
-if (vidContainer) {
+if (vidContainer || showCoach) {
   observer.observe(vidContainer);
 }
+
+hiddenElementsY.forEach((el) => observerY.observe(el));
 
 hiddenElementsX.forEach((el) => observerX.observe(el));
 if (aboutElement) {

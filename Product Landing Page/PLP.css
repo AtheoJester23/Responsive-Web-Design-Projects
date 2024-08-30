@@ -164,11 +164,21 @@ form{
     font-size: 30px;
 }
 
+.aboutContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0px 100px;
+}
+
 .quotesContainer{
     display: flex;
     flex-direction: column;
-    gap: 100px;
-    margin: 70px;
+    gap: 400px;
+    margin-top: 300px;
+    margin-bottom: 300px;
 }
 
 .meetCoach{
@@ -177,7 +187,7 @@ form{
 }
 
 .coachImg1, .coachImg2, .coachImg3{
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-radius: 20px;
     transition: transform 0.15s;
@@ -233,6 +243,7 @@ form{
 .coachList{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     text-align: center;
     color: white;
     /* background-color: red; */
@@ -245,15 +256,13 @@ form{
 
 .coachName{
     background-color: rgb(15, 15, 15);
-    color: #C0C0C0;
+    color: linear-gradient(135deg, #e0e0e0, #c0c0c0, #f8f8f8, #b0b0b0, #d0d0d0, #e0e0e0);;
     display: block;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     width: 50%;
-    border: solid;
-    border-width: 2px;
     border-top: none;
     border-radius: 0px 0px 20px 20px;
 }
@@ -265,6 +274,9 @@ form{
     align-items: center;
     margin-bottom: 100px;
     transition: transform 0.15s;
+    width: 25%;
+    background-color: rgb(15, 15, 15);
+    border-radius: 20px;
 }
 
 .gridContent:hover{
@@ -294,6 +306,14 @@ hr{
     transition: all 1s;
 }
 
+.hiddenY{
+    opacity: 0;
+    filter: blur(1px);
+    transform: translateY(10%);
+    transition: all 1s;
+}
+
+
 .show{
     opacity: 1;
     filter: blur(0);
@@ -313,11 +333,27 @@ hr{
     transform: translateX(0);
 }
 
+
 .wrapper{
     height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.wrapper::-webkit-scrollbar-track {
+    background: rgb(15, 15, 15); /* Track color */
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: #BF0426; /* Thumb color */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+    border: 3px solid #0A0E17; /* Padding around the thumb */
+    border-width: 1px;
 }
 
 .background{
@@ -336,12 +372,36 @@ object-fit: cover;
 z-index: -1;
 }
 
+.background2{
+    transform: translateZ(-10px) scale(2);
+}
+
+.background2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.foreground2{
+    transform: translateZ(-2px) scale(1);
+}
+
 .foreground {
     position: absolute;
-    height: 120%;
-    width: 120%;
+    height: 105%;
+    width: 105%;
     object-fit: scale-down;
-    left: 150px;
+    left: 250px;
+    z-index: -1;
+}
+
+.foreground2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
     z-index: -1;
 }
 
@@ -349,6 +409,12 @@ z-index: -1;
     position: relative;
     transform-style: preserve-3d;
     z-index: -1px;
+}
+
+.parallaxSec2{
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: px;
 }
 
 .mainSec{
@@ -363,11 +429,15 @@ z-index: -1;
     background-color: #161616;
     position: relative;
     padding-top: 50px;
+    margin-top: 0px;
 }
 
 footer{
     background-color: rgb(33,33,33);
+    font-weight: lighter;
+    z-index: 2000;
 }
+
 
 
 /* medium phone */
@@ -544,7 +614,7 @@ footer{
         color: white;
         gap: 10px;
         margin-top: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
     }
     
     .changeText{
@@ -636,8 +706,50 @@ footer{
         padding-top: 50px;
     }
     
+    .coachImg1, .coachImg2, .coachImg3{
+        width: 60%;
+        height: 90%;
+        border-radius: 20px;
+        transition: transform 0.15s;
+        background-color: rgb(15, 15, 15);
+        color: linear-gradient(135deg, #e0e0e0, #c0c0c0, #f8f8f8, #b0b0b0, #d0d0d0, #e0e0e0);
+    }
+
+    .coachName{
+        background-color: rgb(15, 15, 15);
+        color: linear-gradient(135deg, #e0e0e0, #c0c0c0, #f8f8f8, #b0b0b0, #d0d0d0, #e0e0e0);
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: 60%;
+        height: 50px;
+        border: solid;
+        border-width: 2px;
+        border-top: none;
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .coachNameName{
+        font-size: 12px;
+    }
+
+    .gridContent{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        margin-bottom: 100px;
+        transition: transform 0.15s;
+        border: solid;
+        border-color: linear-gradient(135deg, #e0e0e0, #c0c0c0, #f8f8f8, #b0b0b0, #d0d0d0, #e0e0e0);
+    }
 }
 
+
+/* Normal Laptop */
 @media (min-width: 1430px){
     #teleportHere{
         display: none;
