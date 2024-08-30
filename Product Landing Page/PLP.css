@@ -5,6 +5,11 @@ body{
     overflow-y: hidden;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -43,14 +48,34 @@ header{
 }
 
 .hook{
+    position: relative;
+    overflow: hidden;
     margin-top: 100px;
     height: 600px;
     display: grid;
     grid-template-rows: 200px 300px;
     justify-content: start;
     padding: 60px;
-    background-color: rgb(33,33,33);
     color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.hook::before{
+    overflow-y: hidden;
+    height: 100vh;
+    padding:0;
+    margin:0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url(Img/TestGif.gif);
+    background-size: cover;
+    filter: brightness(0.3); /* Adjust the brightness */
+    z-index: -1; /* Ensure the background is below the text */
+    opacity: 1; /* Ensure the background image is fully visible */
 }
 
 .hookH1{
@@ -104,6 +129,14 @@ header{
     padding-bottom: 30px;
 }
 
+.clientTDContainer{
+    padding-top: 40px;
+}
+
+.theReview{
+    font-size: 16px;
+}
+
 .quoteSection{
     padding-bottom: 30px;
 }
@@ -116,7 +149,7 @@ header{
     margin-bottom: 90px;
 }
 
-.clientTitle{
+.aboutTitle{
     font-size: 80px;
     color: whitesmoke;
     margin-top: 50px;
@@ -125,7 +158,7 @@ header{
 
 .clientDesc{
     color: white;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 form{
@@ -173,6 +206,14 @@ form{
     padding: 0px 100px;
 }
 
+.aboutText{
+    font-size: 17px;
+} 
+
+.bigText{
+    color: white;
+}
+
 .quotesContainer{
     display: flex;
     flex-direction: column;
@@ -205,6 +246,7 @@ form{
     width: 700px;
     margin: 0 auto;
     display: flex;
+    gap: 15px;
     justify-content: center;
     align-items: center;
     color: #FEF9FF;
@@ -224,6 +266,7 @@ form{
     width: 700px;
     margin: 0 auto;
     display: flex;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     color: #FEF9FF;
@@ -357,7 +400,7 @@ hr{
 }
 
 .background{
-    transform: translateZ(-10px) scale(2);
+    transform: translateZ(-10px) scale(2.1);
 }
 
 .foreground {
@@ -369,11 +412,11 @@ position: absolute;
 height: 100%;
 width: 100%;
 object-fit: cover;
-z-index: -1;
+z-index: -1px;
 }
 
 .background2{
-    transform: translateZ(-10px) scale(2);
+    transform: translateZ(-3px) scale(1.4);
 }
 
 .background2{
@@ -381,7 +424,7 @@ z-index: -1;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -2px;
 }
 
 .foreground2{
@@ -394,7 +437,7 @@ z-index: -1;
     width: 105%;
     object-fit: scale-down;
     left: 250px;
-    z-index: -1;
+    z-index: 0;
 }
 
 .foreground2{
@@ -414,7 +457,7 @@ z-index: -1;
 .parallaxSec2{
     position: relative;
     transform-style: preserve-3d;
-    z-index: px;
+    z-index: -2px;
 }
 
 .mainSec{
@@ -432,6 +475,14 @@ z-index: -1;
     margin-top: 0px;
 }
 
+.mainSec3{
+    z-index: 1999;
+    background-color: #161616;
+    position: relative;
+    padding-top: 50px;
+    margin-top: 20px;
+}
+
 footer{
     background-color: rgb(33,33,33);
     font-weight: lighter;
@@ -440,8 +491,8 @@ footer{
 
 
 
-/* medium phone */
-@media (min-width: 333px) and (max-width: 768px){
+/* Phone */
+@media (min-width: 333px) and (max-width: 599px){
     header{
         display: flex;
         flex-direction: column;
@@ -485,7 +536,7 @@ footer{
         margin-top: 100px;
         height: 350px;
         display: grid;
-        grid-template-rows: 100px 300px;
+        grid-template-rows: 80px 300px;
         justify-content: start;
         padding: 30px;
         background-color: rgb(33,33,33);
@@ -514,15 +565,24 @@ footer{
     }
 
     #video{
-        height: 140px;
-        width: 248px;
+        height: 169px;
+        width: 300px;
         border-radius: 5px;
     }
     
-    .clientTitle{
+    .aboutTitle{
         font-size: 30px;
         color: whitesmoke;
         margin-top: 25px;
+    }
+
+    .aboutText{
+        font-size: 10px;
+    }
+
+    .aboutContainer{
+        margin: 10px 0px;
+        padding: 0px 25px;
     }
     
     .clientDesc{
@@ -615,6 +675,7 @@ footer{
         gap: 10px;
         margin-top: 50px;
         margin-bottom: 0px;
+        z-index: 1500;
     }
     
     .changeText{
@@ -652,13 +713,16 @@ footer{
         font-size: 15px;
     }
 
+
     .coachList{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         color: white;
         /* background-color: red; */
-        gap: 30px;
+        gap: 20px;
         margin-top: 50px;
         overflow-x: hidden;
         overflow-y: hidden;
@@ -681,7 +745,6 @@ footer{
         align-items: center;
         padding: 10px;
         width: 50%;
-        border: solid;
         border-width: 2px;
         border-top: none;
         border-radius: 0px 0px 20px 20px;
@@ -703,21 +766,19 @@ footer{
         z-index: 1999;
         background-color: #161616;
         position: relative;
-        padding-top: 50px;
+        padding-top: 5px;
     }
     
     .coachImg1, .coachImg2, .coachImg3{
-        width: 60%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
         border-radius: 20px;
         transition: transform 0.15s;
         background-color: rgb(15, 15, 15);
-        color: linear-gradient(135deg, #e0e0e0, #c0c0c0, #f8f8f8, #b0b0b0, #d0d0d0, #e0e0e0);
     }
 
     .coachName{
         background-color: rgb(15, 15, 15);
-        color: linear-gradient(135deg, #e0e0e0, #c0c0c0, #f8f8f8, #b0b0b0, #d0d0d0, #e0e0e0);
         display: block;
         display: flex;
         justify-content: center;
@@ -725,7 +786,6 @@ footer{
         padding: 20px;
         width: 60%;
         height: 50px;
-        border: solid;
         border-width: 2px;
         border-top: none;
         border-radius: 0px 0px 20px 20px;
@@ -743,11 +803,349 @@ footer{
         width: 200px;
         margin-bottom: 100px;
         transition: transform 0.15s;
-        border: solid;
         border-color: linear-gradient(135deg, #e0e0e0, #c0c0c0, #f8f8f8, #b0b0b0, #d0d0d0, #e0e0e0);
     }
+
+    .quotesContainer{
+        padding: 50px;
+    }
+
+    footer{
+        background-color: rgb(33,33,33);
+        font-weight: lighter;
+        z-index: 2000;
+        font-size: 10px;
+    }
+    
 }
 
+/* Tablets */
+@media (min-width: 600px) and (max-width: 1279px){
+    header{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #BF0426;
+        padding: 15px 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000;
+    }
+
+    #header-img{
+        width: 270px;
+        height: auto;
+
+    }
+
+    #nav-bar {
+        display: flex;
+        gap: 2px; /* Reduced gap between nav links */
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; /* Wrap navigation links to the next line if needed */
+    }
+
+    .nav-link {
+        display: flex;
+        text-decoration: none;
+        color: #FEF9FF;
+        border: solid;
+        border-width: 1px;
+        padding: 8px 17px; /* Reduced padding */
+        font-size: 13px; /* Smaller font size */
+    }
+
+    .hook{
+        margin-top: 100px;
+        height: 350px;
+        display: grid;
+        grid-template-rows: 80px 300px;
+        justify-content: start;
+        padding: 30px;
+        background-color: rgb(33,33,33);
+        color: white;
+    }
+
+    .hookH1{
+        font-size: 35px;
+    }
+
+    .hookDesc{
+        font-size: 13px;
+    }
+
+    .letsStart{
+        background-color: goldenrod;
+        color: #0A0E17;
+        font-weight: bold;
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .checkCoach{
+        margin-top: 70px;
+        font-size: 30px;
+    }
+
+    #video{
+        height: 315px;
+        width: 560px;
+        border-radius: 15px;
+    }
+    
+    .aboutTitle{
+        font-size: 30px;
+        color: whitesmoke;
+        margin-top: 25px;
+    }
+
+    .aboutText{
+        font-size: 13px;
+    }
+
+    .aboutContainer{
+        margin: 10px 0px;
+        padding: 0px 55px;
+    }
+    
+    .clientDesc{
+        color: white;
+        font-size: 10px;
+    }
+
+    .clientTDContainer{
+        width: 530px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .about{
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        text-align: center;
+        margin: 50px 80px;
+        width: 325px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FEF9FF;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .clientContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .clientName{
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .theReview{
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .revStat{
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .about2{
+        opacity: 0;
+        transform: translateX(100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        text-align: center;
+        margin: 50px 80px;
+        width: 250px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #FEF9FF;
+    }
+
+    #teleportThis{
+        display: none;
+    }
+
+    #teleportHere{
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .form-container{
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        /* background-color: #0A0E17; */
+        padding: 40px;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        gap: 10px;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        z-index: 1500;
+    }
+    
+    .changeText{
+        font-size: 25px;
+        margin-bottom: px;
+    }
+    
+    #email{
+        width: 230px;
+        height: 25px;
+        border-radius: 3px;
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    #submit{
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .foreground {
+        transform: translateZ(-4px) scale(2.2);
+    }
+
+    .foreground {
+        position: absolute;
+        height: 90%;
+        width: 90%;
+        object-fit: scale-down;
+        left: 160px;
+        z-index: -1;
+    }
+
+    .quotes{
+        font-size: 20px;
+    }
+
+
+    .coachList{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        /* background-color: red; */
+        gap: 15px;
+        margin-top: 50px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding: 20px;
+        margin-bottom: 50px;
+        
+    }
+
+    .meetCoach{
+        margin-top: 70px;
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+    
+    .coachName{
+        background-color: #BF0426;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 50%;
+        border-width: 2px;
+        border-top: none;
+        border-radius: 0px 0px 20px 20px;
+        font-size: 5px;
+    }
+
+    .gridContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        /* border: solid; */
+        transition: transform 0.15s;
+    }
+
+    
+    .mainSec2{
+        z-index: 1999;
+        background-color: #161616;
+        position: relative;
+        padding-top: 5px;
+    }
+    
+    .coachImg1, .coachImg2, .coachImg3{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        transition: transform 0.15s;
+        background-color: rgb(15, 15, 15);
+    }
+
+    .coachName{
+        background-color: rgb(15, 15, 15);
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: 60%;
+        height: 50px;
+        border-width: 2px;
+        border-top: none;
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .coachNameName{
+        font-size: 14px;
+    }
+
+    .gridContent{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        margin-bottom: 100px;
+        transition: transform 0.15s;
+        border-color: linear-gradient(135deg, #e0e0e0, #c0c0c0, #f8f8f8, #b0b0b0, #d0d0d0, #e0e0e0);
+    }
+
+    .quotesContainer{
+        padding: 50px;
+    }
+
+    footer{
+        background-color: rgb(33,33,33);
+        font-weight: lighter;
+        z-index: 2000;
+        font-size: 13px;
+    }
+    
+}
 
 /* Normal Laptop */
 @media (min-width: 1430px){
