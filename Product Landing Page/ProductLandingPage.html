@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="PLP.css">
-    <script defer src="animate.js"></script>
 
     <!-- YouTube Player API script -->
     <script src="https://www.youtube.com/iframe_api"></script>
@@ -36,7 +35,7 @@
             </div>
             
             <section class="vidSection shadow">
-                <h1 class="checkCoach  text-light fw-bold text-center">Let's Hear Some From Our Coach!</h1>
+                <h1 class="checkCoach hidden text-light fw-bold text-center">Let's Hear Some From Our Coach!</h1>
 
                 <div class="vidContainer">
                     <iframe id="video" width="960" height="415" src="https://www.youtube.com/embed/uKVSiSEFWUU?si=kRRdcHIyHBSqii-r&amp;start=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen data-autoplay="true"></iframe>
@@ -83,12 +82,12 @@
         </div>
 
         <div class="parallaxSec">
-            <img class="background" src="Img/backgroundParallax.png" alt="">
-            <img class="foreground" src="img/frntgrndParallax.png" alt="">
+            <img class="background" src="https://github.com/AtheoJester23/Responsive-Web-Design-Projects/blob/freeCodeCampVersion/Product%20Landing%20Page/Img/backgroundParallax.png?raw=true" alt="">
+            <img class="foreground" src="https://github.com/AtheoJester23/Responsive-Web-Design-Projects/blob/freeCodeCampVersion/Product%20Landing%20Page/Img/frntgrndParallax.png?raw=true" alt="">
             <div class="form-container section2" id="start">
                 <h1 class="display-5 changeText">Ready for Change?</h1>
                 <form action="https://www.freecodecamp.com/email-submit" id="form">
-                    <input type="email" id="email" placeholder="Enter email address" class="form-control">
+                    <input name="email" type="email" id="email" placeholder="Enter email address" class="form-control">
                     <input type="submit" id="submit" value="Let's get started" class="btn text-white">
                 </form>
             </div>
@@ -105,24 +104,24 @@
         </div>
 
         <div class="parallaxSec2" id="listCoach">
-            <img class="background2" src="img/sea.png" alt="">
+            <img class="background2" src="https://github.com/AtheoJester23/Responsive-Web-Design-Projects/blob/freeCodeCampVersion/Product%20Landing%20Page/Img/sea.png?raw=true" alt="">
             <div class="testingtest">
-                <h1 class="display-5 text-white text-center meetCoach  shadow">Meet Some Of Our Coaches</h1>
+                <h1 class="display-5 text-white text-center meetCoach hidden shadow">Meet Some Of Our Coaches</h1>
                 <div class="coachList">
                     <a href="https://www.youtube.com/@ICEcoldJT" class="gridContent lead shadow-lg">
-                        <img class="coachImg1 shadow" src="Img/ICEcoldJT.png" alt="">
+                        <img class="coachImg1 shadow" src="https://github.com/AtheoJester23/Responsive-Web-Design-Projects/blob/freeCodeCampVersion/Product%20Landing%20Page/Img/ICEcoldJT.png?raw=true" alt="">
                         <div class="coachName">
                             <p class="lead coachNameName">ICEcold JT</p>
                         </div>
                     </a>
                     <a href="https://www.youtube.com/@Hamza97" class="gridContent lead shadow-lg">
-                        <img class="coachImg2 shadow" src="Img/Hamz.png" alt="">
+                        <img class="coachImg2 shadow" src="https://github.com/AtheoJester23/Responsive-Web-Design-Projects/blob/freeCodeCampVersion/Product%20Landing%20Page/Img/Hamz.png?raw=true" alt="">
                         <div class="coachName">
                             <p class="lead coachNameName">Hamza</p>
                         </div>
                     </a>
                     <a href="https://www.audible.com/author/Jim-Rohn/B002TW1O8E" class="gridContent lead shadow-lg">
-                        <img class="coachImg3 shadow" src="img/Jim-Rohn.png" alt="">
+                        <img class="coachImg3 shadow" src="https://github.com/AtheoJester23/Responsive-Web-Design-Projects/blob/freeCodeCampVersion/Product%20Landing%20Page/Img/Jim-Rohn.png?raw=true" alt="">
                         <div class="coachName">
                             <p class="lead coachNameName">Jim Rohn</p>
                         </div>
@@ -136,16 +135,82 @@
                 <h1 class="text-center bigText">Coaches Quotes</h1>
 
                 <div class="quotesContainer">
-                    <p class=" lead fst-italic text-warning text-center quotes">"Don't be a follower, be a student" - Jim Rohn</p>
-                    <p class=" lead fst-italic text-warning text-center quotes">"Do the hard work, especially if you don't feel like it" - Hamza</p>
-                    <p class=" lead fst-italic text-warning text-center quotes">"Retain For Gains or Bust For Lust... The Choice is Yours" - ICEcold JT</p>
+                    <p class="hiddenY lead fst-italic text-warning text-center quotes">"Don't be a follower, be a student" - Jim Rohn</p>
+                    <p class="hiddenY lead fst-italic text-warning text-center quotes">"Do the hard work, especially if you don't feel like it" - Hamza</p>
+                    <p class="hiddenY lead fst-italic text-warning text-center quotes">"Retain For Gains or Bust For Lust... The Choice is Yours" - ICEcold JT</p>
                 </div>
             </section>
         </div>
         <footer class="shadow text-center text-white p-2">Made by: Atheo Jester</footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                entry.target.classList.add("show");
 
+                const video = document.getElementById("video");
+                const videoSrc = video.src;
+                if (!videoSrc.includes("autoplay=1")) {
+                    video.src = videoSrc + "&autoplay=1"; // Append autoplay=1 to the existing src
+                }
+
+                observer.unobserve(entry.target);
+                } else {
+                entry.target.classList.remove("show");
+                }
+            });
+        });
+
+        const observerY = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                } else {
+                entry.target.classList.remove("show");
+                }
+            });
+        });
+
+        const observerX = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                entry.target.classList.add("showX");
+                } else {
+                entry.target.classList.remove("showX");
+                }
+            });
+        });
+
+        const video = document.getElementById("video");
+
+        const hiddenElements = document.querySelectorAll(".hidden");
+
+        const hiddenElementsX = document.querySelectorAll(".hiddenX");
+
+        const vidContainer = document.querySelector(".vidContainer");
+
+        const aboutElement = document.querySelectorAll(".about");
+
+        const hiddenElementsY = document.querySelectorAll(".hiddenY");
+
+        hiddenElements.forEach((el) => observer.observe(el));
+        if (vidContainer || showCoach) {
+        observer.observe(vidContainer);
+        }
+
+        hiddenElementsY.forEach((el) => observerY.observe(el));
+
+        hiddenElementsX.forEach((el) => observerX.observe(el));
+        if (aboutElement) {
+        observerX.observe(aboutElement);
+        }
+
+    </script>
 </body>
 
 
