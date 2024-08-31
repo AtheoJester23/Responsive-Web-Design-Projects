@@ -71,7 +71,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    background-image: url(https://github.com/AtheoJester23/Responsive-Web-Design-Projects/blob/freeCodeCampVersion/Product%20Landing%20Page/Img/TestGif.gif?raw=true);
+    background-image: url(Img/TestGif.gif);
     background-size: cover;
     filter: brightness(0.3); /* Adjust the brightness */
     z-index: -1; /* Ensure the background is below the text */
