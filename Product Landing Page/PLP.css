@@ -100,7 +100,6 @@ header{
 }
 
 .vidContainer{
-    opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
     margin: 0 auto;
@@ -238,7 +237,6 @@ form{
 
 
 .about{
-    opacity: 0;
     transform: translateX(-100px);
     transition: opacity 1s ease-out, transform 1s ease-out;
     text-align: center;
@@ -258,7 +256,6 @@ form{
 }
 
 .about2{
-    opacity: 0;
     transform: translateX(100px);
     transition: opacity 1s ease-out, transform 1s ease-out;
     text-align: center;
@@ -273,7 +270,6 @@ form{
 }
 
 .about2.hiddenX{
-    opacity: 0;
     transform: translateX(100%);
     transition: all 1s;
 }
@@ -343,14 +339,12 @@ hr{
 }
 
 .hidden{
-    opacity: 0;
     filter: blur(1px);
     transform: translateY(-100%);
     transition: all 1s;
 }
 
 .hiddenY{
-    opacity: 0;
     filter: blur(1px);
     transform: translateY(10%);
     transition: all 1s;
@@ -364,7 +358,6 @@ hr{
 }
 
 .hiddenX{
-    opacity: 0;
     filter: blur(1px);
     transform: translateX(-100%);
     transition: all 1s;
