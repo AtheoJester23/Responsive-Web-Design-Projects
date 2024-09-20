@@ -1,0 +1,110 @@
+body{
+    background-color: #181f25;
+    color: #fceeb8;
+    overflow-x: hidden;
+}
+
+.theNav{
+    background-color: #184c45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navButton{
+    text-decoration: none;
+    color: #111111;
+    border: solid;
+    border-width: 3px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.15s;
+}
+
+.navButton:hover{
+    text-decoration: none;
+    color: #fceeb8;
+    background-color: #111111;
+}
+
+#welcome-section{
+    width: 1440px;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hello{
+    font-family: "Rubik Mono One", monospace;
+    font-size: 3rem;
+    border: solid;
+    padding: 10px 50px;
+}
+
+.frontEnd{
+    font-family: "Rubik Mono One", monospace;
+    font-size: 1rem;
+}
+
+#projects{
+    background-color: #111111;
+    width: 1440px;
+    padding-top: 85px;
+}
+
+.projTitle{
+    color: #3cc47c;
+    text-align: center;
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px); /* ensures equal distribution */
+    gap: 40px; /* controls spacing between grid items */
+    padding: 20px; /* reduced padding for alignment */
+    justify-content: center; /* centers the grid items if they do not fill the line */
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 7px 20px 0px black;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden; /* ensures no overflow from children */
+}
+
+.projImg {
+    width: 100%; /* make image width fill the container */
+    height: auto; /* maintain aspect ratio */
+    border-radius: 50px 50px 0 0;
+}
+
+.projText {
+    background-color: rgb(14,14,14);
+    color: #3cc47c;
+    padding: 30px 20px; /* adjust padding to fit within the container */
+    width: 100%; /* ensures it fills the container */
+    text-align: center;
+    margin: 0;
+    border-radius: 0 0 50px 50px;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
