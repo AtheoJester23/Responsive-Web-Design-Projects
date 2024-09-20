@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #181f25;
     color: #fceeb8;
@@ -15,6 +19,7 @@ body{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 }
 
 .navButton{
@@ -64,30 +69,36 @@ body{
 .projTitle{
     color: #3cc47c;
     text-align: center;
-    
+    font-family: "Rubik Mono One", monospace;
+    opacity: 0;
+}
+
+.hiddenY{
+    opacity: 0;
+    filter: blur(1px);
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 300px); /* ensures equal distribution */
-    gap: 40px; /* controls spacing between grid items */
+    gap: 70px; /* controls spacing between grid items */
     padding: 20px; /* reduced padding for alignment */
     justify-content: center; /* centers the grid items if they do not fill the line */
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 7px 20px 0px black;
-    border-radius: 50px 50px 50px 50px;
-    overflow: hidden; /* ensures no overflow from children */
 }
 
 .projImg {
     width: 100%; /* make image width fill the container */
     height: auto; /* maintain aspect ratio */
-    border-radius: 50px 50px 0 0;
+    display: block;
+    border-radius: inherit;
 }
 
 .projText {
@@ -108,3 +119,80 @@ a{
 a:hover{
     text-decoration: none;
 }
+
+.single-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 7px 20px 0px black;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    overflow: hidden; /* ensures no overflow from children */
+    position: relative;
+    transition: .7s;
+    overflow: hidden;
+}
+
+.single-content:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.single-content .title{
+    margin: 0;
+    position: absolute;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    /* font-weight: bold; */
+    color: white;
+    bottom: 40px;
+    left: 25px;
+    right: 25px;
+    transition: .7s;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.titleText{
+    margin: 0;
+}
+
+.img-text{
+    width: 100%;
+    height: 100%;
+    background: rgba(23,23,23,.95);
+    border-radius: inherit;
+    font-family: "Varela Round", sans-serif;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: perspective(400px) rotateX(-90deg);
+    transform-origin: center top 0;
+    transition: .7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    /* font-weight: bold; */
+    padding: 20px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+
+.single-content:hover .img-text{
+    opacity: 1;
+    transform: perspective(400px) rotate(0);
+}
+
+.single-content:hover .title{
+    bottom: -40px;
+}
+

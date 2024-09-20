@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
+    <!-- Font1 -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     
+    <!-- Font2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="PPWstyles.css">
     <title>Document</title>
 </head>
@@ -25,42 +31,67 @@
     </section>
 
     <section id="projects">
-        <h1 class="projTitle">Here are a few of my projects</h1>
+        <h1 class="projTitle hiddenY">Here are a few of my projects</h1>
 
         <div class="grid">
-            <a href="https://www.freecodecamp.org/AtheoJester" class="project project-tile" target="_blank">
+            <a href="https://www.freecodecamp.org/AtheoJester" class="single-content project-tile" target="_blank">
                 <img class="projImg" src="imgs/p1.png" alt="">
-                <p class="projText">Product Landing Page</p>
+                <div class="title">
+                    <p class="titleText">Product Landing Page</p>
+                </div>
+                <p class="img-text">A Product Landing Page with Parallax, Text Scroll Effect and Scroll Video Autoplay.</p>
             </a>
             
-            <a href="https://www.freecodecamp.org/AtheoJester" class="project project-tile" target="_blank">
+            <a href="https://www.freecodecamp.org/AtheoJester" class="single-content project-tile" target="_blank">
                 <img class="projImg" src="imgs/p2.png" alt="">
-                <p class="projText">Tribute Page</p>
+                <p class="title">Tribute Page</p>
+                <p class="img-text">A Tribute Page About Jesus made out of pure Html and CSS.</p>
             </a>
 
-            <a href="https://github.com/AtheoJester23/JS-toDolist" class="project project-tile" target="_blank">
+            <a href="https://github.com/AtheoJester23/JS-toDolist" class="single-content project-tile" target="_blank">
                 <img class="projImg" src="imgs/p3.png" alt="">
-                <p class="projText">To Do List</p>
+                <p class="title">To Do List</p>
+                <p class="img-text">A "To Do List" That serialize JSON data to localStorage / Web Browser For Saving Data.</p>
             </a>
 
-            <a href="https://github.com/AtheoJester23/Rock-Paper-Scissors" class="project project-tile" target="_blank">
+            <a href="https://github.com/AtheoJester23/Rock-Paper-Scissors" class="single-content project-tile" target="_blank">
                 <img class="projImg" src="imgs/p4.png" alt="">
-                <p class="projText">Rock Paper Scissors</p>
+                <p class="title">Rock Paper Scissors</p>
+                <p class="img-text">Rock Paper Scissors Game made out of pure Javascript, Html, CSS, and Also Uses Local Storage of Web Browser.</p>
             </a>
-            <a href="https://github.com/AtheoJester23/Stopwatch" class="project project-tile" target="_blank">
+            <a href="https://github.com/AtheoJester23/Stopwatch" class="single-content project-tile" target="_blank">
                 <img class="projImg" src="imgs/p5.png" alt="">
-                <p class="projText">Stopwatch</p>
+                <p class="title">Stopwatch</p>
+                <p class="img-text">A Stopwatch made out of pure Javascript, Html, and CSS.</p>
             </a>
-            <a href="https://github.com/AtheoJester23/Voting-System" class="project project-tile" target="_blank">
+            <a href="https://github.com/AtheoJester23/Voting-System" class="single-content project-tile" target="_blank">
                 <img class="projImg" src="imgs/p6.png" alt="">
-                <p class="projText">Voting System</p>
+                <p class="title">Voting System</p>
+                <p class="img-text">A Voting System for School Council</p>
             </a>
             
         </div>
     </section>
 
+    <script>
+        const observerY = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                } else {
+                entry.target.classList.remove("show");
+                }
+            });
+        });
+
+        const hiddenElementsY = document.querySelectorAll(".hiddenY");
+
+        hiddenElementsY.forEach((el) => observerY.observe(el));
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
