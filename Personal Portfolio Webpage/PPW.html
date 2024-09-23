@@ -31,8 +31,9 @@
     </section>
 
     <section id="projects">
-        <h1 class="projTitle hiddenY">Here are a few of my projects</h1>
-
+        <div class="centProjTitle">
+            <h1 class="projTitle hiddenY">Here are a few of my projects</h1>
+        </div>
         <div class="grid">
             <a href="https://www.freecodecamp.org/AtheoJester" class="single-content project-tile" target="_blank">
                 <img class="projImg" src="imgs/p1.png" alt="">
@@ -73,6 +74,10 @@
         </div>
     </section>
 
+    <section id="profileLinks bg-dark">
+        <h1>testing</h1>
+    </section>
+
     <script>
         const observerY = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -88,6 +93,21 @@
         const hiddenElementsY = document.querySelectorAll(".hiddenY");
 
         hiddenElementsY.forEach((el) => observerY.observe(el));
+    
+        //For wave text animation:
+        const text = document.querySelector(".hello");
+
+        const splitText = text.innerHTML.split('')
+        
+        text.innerHTML = splitText.map((char, i) => {
+            if (char === ' ') {
+                return `<span style="transition-delay: ${i * 25}ms;">&nbsp;</span>`;
+            } else {
+                return `<span style="transition-delay: ${i * 25}ms;">${char}</span>`;
+        }
+        }).join('');
+        
+        
     </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

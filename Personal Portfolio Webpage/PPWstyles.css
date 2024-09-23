@@ -24,40 +24,67 @@ body{
 
 .navButton{
     text-decoration: none;
-    color: #111111;
+    color: #c3ffdf;
     border: solid;
     border-width: 3px;
     padding: 10px 20px;
     border-radius: 3px;
     font-weight: bold;
-    transition: background-color 0.15s;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .navButton:hover{
     text-decoration: none;
-    color: #fceeb8;
-    background-color: #111111;
+    color: #184c45;
+    background-color: #c3ffdf;
 }
 
 #welcome-section{
     width: 1440px;
-    height: 740px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px;
 }
 
 .hello{
     font-family: "Rubik Mono One", monospace;
     font-size: 3rem;
-    border: solid;
+    /* border: solid; */
     padding: 10px 50px;
+    color: #3cc47c;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.hello span{
+    display: inline-block;
+    transition: transform 0.3s ease-out, color 0.3s ease;;
+    transform: translateY(0px);
+}
+
+.hello:hover span{
+    transform: translateY(-20px);
+    color: #fceeb8;
+    cursor: pointer;
+}
+
+.hello:hover + .frontEnd{
+    opacity: 1;
+    transform: translateY(30px);
 }
 
 .frontEnd{
     font-family: "Rubik Mono One", monospace;
     font-size: 1rem;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    transition: transform .3s ease, opacity .2s ease;
+    transform: translateY(0px);
+    opacity: 0;
 }
 
 #projects{
@@ -171,8 +198,6 @@ a:hover{
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     transform: perspective(400px) rotateX(-90deg);
     transform-origin: center top 0;
     transition: .7s;
@@ -181,7 +206,6 @@ a:hover{
     align-items: center;
     color: #fff;
     text-align: center;
-    /* font-weight: bold; */
     padding: 20px;
     z-index: 1;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
