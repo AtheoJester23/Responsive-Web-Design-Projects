@@ -6,6 +6,17 @@ body{
     background-color: #181f25;
     color: #fceeb8;
     overflow-x: hidden;
+    font-family: "Varela Round", sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #c3ffdf;
+    border-radius: 10px;
+
 }
 
 .theNav{
@@ -40,7 +51,6 @@ body{
 }
 
 #welcome-section{
-    width: 1440px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -85,12 +95,20 @@ body{
     transition: transform .3s ease, opacity .2s ease;
     transform: translateY(0px);
     opacity: 0;
+    color: #fceeb8;
+}
+
+.toProf{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #projects{
     background-color: #111111;
-    width: 1440px;
-    padding-top: 85px;
+    padding: 105px 0px;
+
 }
 
 .projTitle{
@@ -200,7 +218,7 @@ a:hover{
     left: 0;
     transform: perspective(400px) rotateX(-90deg);
     transform-origin: center top 0;
-    transition: .7s;
+    transition: .5s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,3 +238,124 @@ a:hover{
     bottom: -40px;
 }
 
+#profileLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-decoration: none;
+    color: #fceeb8;
+    display: flex;
+    flex-direction: column;
+}
+
+.theIcon{
+    text-decoration: none;
+    color: #fceeb8;
+    font-size: 3rem;
+    transition: transform .15s ease;
+}
+
+.theIcon:hover{
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+
+.profln{
+    color: #fceeb8;
+}
+
+.iconLinks{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+}
+
+.noClick{
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (min-width: 333px) and (max-width: 554px){
+    #welcome-section{
+        padding: 20px;
+    }
+    
+    .hello{
+        font-size: 23px;
+    }
+
+    .frontEnd{
+        font-size: 10px;
+    }
+
+    .projTitle{
+        font-size: 23px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 180px); /* ensures equal distribution */
+        gap: 30px; /* controls spacing between grid items */
+        padding: 5px; /* reduced padding for alignment */
+        justify-content: center; /* centers the grid items if they do not fill the line */
+    }
+
+    .single-content .title{
+        font-size: 14px;
+    }
+
+    .img-text{
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 555px) and (max-width: 1055px){
+    .hello{
+        font-family: "Rubik Mono One", monospace;
+        font-size: 2rem;
+        padding: 10px 50px;
+        color: #3cc47c;
+        user-select: none;
+        transition: 0.3s;
+    }
+
+    .projTitle{
+        font-size: 25px;
+        color: #3cc47c;
+        text-align: center;
+        font-family: "Rubik Mono One", monospace;
+        opacity: 0;
+    }
+
+    .hiddenY{
+        opacity: 0;
+        filter: blur(1px);
+        transform: translateY(-100%);
+        transition: all 1s;
+    }
+    
+    .show{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 250px); /* ensures equal distribution */
+        gap: 70px; /* controls spacing between grid items */
+        padding: 20px; /* reduced padding for alignment */
+        justify-content: center; /* centers the grid items if they do not fill the line */
+    }
+
+    .single-content .title{
+        font-size: 1rem;
+    }
+
+    .img-text{
+        font-size: 1rem;
+    }
+}
